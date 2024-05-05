@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 namespace semana5GPaucar.Models
 {
 
+
+
+
     [Table("persona")]
     public class Persona
     {
@@ -17,6 +20,8 @@ namespace semana5GPaucar.Models
         public int Id { get; set; }
         [MaxLength(25), Unique]
         public string Name { get; set; }
+        public string Apellido { get; set; }
+
     }
 
 }

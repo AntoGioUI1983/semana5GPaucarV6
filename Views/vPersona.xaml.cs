@@ -43,6 +43,6 @@ public partial class vPersona : ContentPage
     {
         var button = sender as Button;
         var persona = button.BindingContext as Persona;
-        Navigation.PushAsync(new Views.vEditar(persona.Name, persona.Id));
+        Navigation.PushAsync(new Views.vEditar(persona.Name, persona.Id,persona.Apellido));
     }
 }

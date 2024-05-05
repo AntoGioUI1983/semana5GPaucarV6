@@ -17,7 +17,7 @@
 
 
 
-        <Entry x:Name="txtPersona" Placeholder="Ingrese Nombres" MaxLength="20" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Entry x:Name="txtNombre" Placeholder="Ingrese Nombres" MaxLength="20" TextColor="Black" HorizontalTextAlignment="Center"/>
 
         <Entry x:Name="txtApellido" Placeholder="Ingrese Apellidos" MaxLength="20" TextColor="Black" HorizontalTextAlignment="Center"/>
 

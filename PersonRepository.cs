@@ -28,7 +28,7 @@ namespace semana5GPaucar
             _dbPath = dbPath;
         }
 
-        public void AddNewPerson(string name)
+        public void AddNewPerson(string name, string apellido)
         {
             int result = 0;
             try
@@ -36,7 +36,7 @@ namespace semana5GPaucar
                 Init();
                 if (string.IsNullOrEmpty(name))
                     throw new Exception("El nombre es requerido");
-                Persona person = new() { Name = name };
+                Persona person = new() { Name = name, Apellido = apellido }; // Aquí se asigna el apellido
                 result = conn.Insert(person);
                 statusMessage = string.Format("Dato agregado", result, name);
 
@@ -46,6 +46,7 @@ namespace semana5GPaucar
                 statusMessage = string.Format("Error, no se inserto", name, ex.Message);
             }
         }
+
 
         public List<Persona> GetAllPeople()
         {

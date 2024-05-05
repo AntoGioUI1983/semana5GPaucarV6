@@ -9,16 +9,22 @@ public partial class vAgregar : ContentPage
 		InitializeComponent();
 	}
 
-    
-    
 
     private async void btnGuardar_Clicked(object sender, EventArgs e)
     {
-        App.PersonRepo.AddNewPerson(txtPersona.Text);
+        if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtApellido.Text))
+        {
+            App.PersonRepo.AddNewPerson(txtNombre.Text, txtApellido.Text);
 
-        await DisplayAlert("Información", App.PersonRepo.statusMessage, "Aceptar");
-
+            await DisplayAlert("Información", App.PersonRepo.statusMessage, "Aceptar");
+        }
+        else
+        {
+            await DisplayAlert("Error", "El nombre y el apellido son requeridos", "Aceptar");
+        }
     }
+
+
 
     private void btnInicio_Clicked(object sender, EventArgs e)
     {
