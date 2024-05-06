@@ -39,16 +39,11 @@
 
                 </Button.ImageSource>
             </Button>
-
-
             <Image Source="personas.png" HeightRequest="50" Grid.Row="1" Grid.Column="2" />
-
-
         </Grid>
         <StackLayout BackgroundColor="LightBlue" Padding="20">
             <Label Text="Id     Nombres       Apellidos" FontSize="Micro" TextColor="Black" />
         </StackLayout>
-
 
         <Grid>
 
